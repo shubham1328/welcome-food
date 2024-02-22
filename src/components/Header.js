@@ -8,6 +8,7 @@ import { useSelector } from "react-redux"
 function Header() {
   const [buttonName, setButtonName] = useState("Login");
   const onlineStatus = useOnlineStatus();
+  const cartItems = useSelector((store) => store.cart.items);
 
   const data = useContext(UserContext);
   console.log("🚀 ~ Header ~ data:", data);
@@ -21,8 +22,6 @@ function Header() {
   };
 
   // Subscribing to the store using a Selector
-
-  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className="flex justify-between bg-pink-100 shadow-lg">
@@ -44,7 +43,7 @@ function Header() {
           <li className="px-4">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li className="px-4 font-bold text-xl">Cart - ({cartItems.length} items)</li>
+          <Link to="/cart"><li className="px-4 font-bold text-xl">Cart - ({cartItems.length} items)</li></Link>
           <button
             className="login"
             onClick={() => {

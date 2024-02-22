@@ -77,3 +77,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Slice (cartSlice)
 - dispatch(action)
 - Selector
+
+# Type of testing(developer)
+- unit Testing
+- Integration
+- End to End Testing -  e2e testing
+
+# setting up testing in out app
+- Install react testing library
+- Install jest
+- Installed babel dependencies
+- Configured bable 
+- (If using parcel in project) Configure Parcel Config file to disable bable transpilation
+
